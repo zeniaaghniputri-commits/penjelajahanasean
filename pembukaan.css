@@ -1,0 +1,425 @@
+/* =====================================================
+   ASEAN LITTLE EXPLORERS
+   PEMBUKAAN - CSS
+   ===================================================== */
+
+.page-pembukaan {
+    background: #fffdf4;
+    color: #315b3b;
+    font-family: inherit;
+}
+
+/* HERO */
+.page-pembukaan .opening-hero {
+    padding: 55px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    background: #e9f3d5;
+    border-radius: 0 0 35px 35px;
+}
+
+.page-pembukaan .opening-hero h1 {
+    color: #28633b;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.page-pembukaan .opening-hero p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.page-pembukaan .opening-main-character {
+    width: 240px;
+    max-width: 100%;
+    object-fit: contain;
+    animation: openingFloat 3s ease-in-out infinite;
+}
+
+@keyframes openingFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* MODE BELAJAR */
+.page-pembukaan .reading-section {
+    padding-top: 45px;
+}
+
+.page-pembukaan .reading-buttons,
+.page-pembukaan .audio-controls {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.page-pembukaan .mode-button,
+.page-pembukaan .audio-controls button {
+    border: none;
+    border-radius: 25px;
+    padding: 11px 20px;
+    background: #3c8952;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.page-pembukaan .mode-button:hover,
+.page-pembukaan .audio-controls button:hover,
+.page-pembukaan .mode-button.active {
+    background: #28633b;
+}
+
+/* MATERI */
+.page-pembukaan .opening-content {
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.page-pembukaan .material-card {
+    background: white;
+    border: 2px solid #e0e9c8;
+    border-radius: 20px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.page-pembukaan .material-card h2 {
+    color: #397849;
+    margin-bottom: 10px;
+}
+
+.page-pembukaan .material-card p {
+    line-height: 1.7;
+}
+
+/* MODE MENDENGARKAN */
+.page-pembukaan.listening-mode .material-card {
+    border-color: #e7c85c;
+    background: #fffbed;
+}
+
+/* BAGIAN KARAKTER */
+.page-pembukaan .characters-section {
+    padding: 55px 0;
+    background: #f5f7e9;
+}
+
+.page-pembukaan .characters-section > .container > h2,
+.page-pembukaan .characters-section > .container > p {
+    text-align: center;
+}
+
+.page-pembukaan .characters-section > .container > h2 {
+    color: #28633b;
+    margin-bottom: 12px;
+}
+
+.page-pembukaan .characters-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+/* KARTU KARAKTER */
+.page-pembukaan .character-card {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 28px;
+    background: #fff;
+    border: 2px solid #e4ebd2;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(49, 91, 59, 0.07);
+}
+
+.page-pembukaan .character-card:nth-child(even) {
+    background: #fffdf4;
+}
+
+.page-pembukaan .character-info {
+    flex: 1;
+}
+
+.page-pembukaan .character-info h3 {
+    color: #28633b;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.page-pembukaan .character-info p {
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.page-pembukaan .character-country {
+    display: inline-block;
+    color: #397849;
+    background: #e9f3d5;
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* COUNTRYBALL */
+.page-pembukaan .character-avatar {
+    position: relative;
+    flex: 0 0 220px;
+    width: 220px;
+    height: 220px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    animation: countryballFloat 3s ease-in-out infinite;
+}
+
+.page-pembukaan .character-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.25s ease;
+}
+
+.page-pembukaan .character-avatar:hover img {
+    transform: scale(1.07) rotate(-3deg);
+}
+
+@keyframes countryballFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+}
+
+/* WAJAH */
+.page-pembukaan .character-face {
+    position: absolute;
+    width: 55%;
+    height: 42%;
+    top: 34%;
+    left: 22.5%;
+    pointer-events: none;
+}
+
+/* MATA */
+.page-pembukaan .eye {
+    position: absolute;
+    top: 12%;
+    width: 29%;
+    height: 45%;
+    background: white;
+    border: 2px solid #252525;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.page-pembukaan .eye-left {
+    left: 12%;
+}
+
+.page-pembukaan .eye-right {
+    right: 12%;
+}
+
+.page-pembukaan .pupil {
+    position: absolute;
+    width: 42%;
+    height: 55%;
+    left: 35%;
+    top: 25%;
+    border-radius: 50%;
+    background: #171717;
+}
+
+/* ALIS */
+.page-pembukaan .brow {
+    position: absolute;
+    top: 0;
+    width: 27%;
+    height: 5px;
+    background: #252525;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.page-pembukaan .brow-left {
+    left: 12%;
+}
+
+.page-pembukaan .brow-right {
+    right: 12%;
+}
+
+/* MULUT */
+.page-pembukaan .mouth {
+    position: absolute;
+    left: 38%;
+    top: 66%;
+    width: 24%;
+    height: 15%;
+    border-bottom: 4px solid #252525;
+    border-radius: 0 0 50% 50%;
+    transition: all 0.2s ease;
+}
+
+/* PIPI */
+.page-pembukaan .blush {
+    position: absolute;
+    top: 55%;
+    width: 15%;
+    height: 9%;
+    background: rgba(245, 105, 105, 0.45);
+    border-radius: 50%;
+}
+
+.page-pembukaan .blush-left {
+    left: 0;
+}
+
+.page-pembukaan .blush-right {
+    right: 0;
+}
+
+/* EKSPRESI SENANG */
+.page-pembukaan .expression-happy .mouth {
+    height: 25%;
+    top: 60%;
+    background: #252525;
+    border: 2px solid #252525;
+    border-radius: 10% 10% 50% 50%;
+}
+
+/* EKSPRESI TERKEJUT */
+.page-pembukaan .expression-surprised .eye {
+    height: 55%;
+    width: 32%;
+    top: 8%;
+}
+
+.page-pembukaan .expression-surprised .mouth {
+    width: 15%;
+    height: 22%;
+    left: 42.5%;
+    top: 65%;
+    border: 3px solid #252525;
+    border-radius: 50%;
+    background: transparent;
+}
+
+/* EKSPRESI BERPIKIR */
+.page-pembukaan .expression-thinking .pupil {
+    left: 52%;
+    top: 15%;
+}
+
+.page-pembukaan .expression-thinking .brow-left {
+    transform: rotate(-15deg) translateY(-3px);
+}
+
+.page-pembukaan .expression-thinking .mouth {
+    width: 18%;
+    left: 42%;
+    top: 70%;
+    border-bottom: 4px solid #252525;
+    border-radius: 50%;
+}
+
+/* EKSPRESI MARAH */
+.page-pembukaan .expression-angry .brow-left {
+    transform: rotate(22deg);
+    top: 8%;
+}
+
+.page-pembukaan .expression-angry .brow-right {
+    transform: rotate(-22deg);
+    top: 8%;
+}
+
+.page-pembukaan .expression-angry .mouth {
+    top: 72%;
+    border-bottom: none;
+    border-top: 4px solid #252525;
+    border-radius: 50%;
+}
+
+/* EKSPRESI SEDIH */
+.page-pembukaan .expression-sad .brow-left {
+    transform: rotate(-20deg);
+    top: 8%;
+}
+
+.page-pembukaan .expression-sad .brow-right {
+    transform: rotate(20deg);
+    top: 8%;
+}
+
+.page-pembukaan .expression-sad .mouth {
+    top: 75%;
+    border-bottom: none;
+    border-top: 4px solid #252525;
+    border-radius: 50%;
+}
+
+/* KEDIPAN */
+.page-pembukaan .character-avatar.is-blinking .eye {
+    transform: scaleY(0.12);
+    transform-origin: center;
+}
+
+/* PETUNJUK KLIK */
+.page-pembukaan .character-hint {
+    color: #82917a;
+    font-size: 0.85rem;
+    margin-top: 12px;
+}
+
+/* PENUTUP */
+.page-pembukaan .opening-ending {
+    text-align: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.page-pembukaan .opening-ending img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .page-pembukaan .opening-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .page-pembukaan .opening-hero h1 {
+        font-size: 2rem;
+    }
+
+    .page-pembukaan .character-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .page-pembukaan .character-avatar {
+        flex-basis: auto;
+        width: 190px;
+        height: 190px;
+    }
+
+    .page-pembukaan .character-info h3 {
+        font-size: 1.4rem;
+    }
+}
