@@ -1,0 +1,164 @@
+/* =====================================================
+   PENJELAJAHAN ASEAN - APA ITU ASEAN (CSS)
+   Memakai variabel & komponen dari style.css
+   ===================================================== */
+
+/* ---------- JUDUL ---------- */
+.intro-section {
+  padding: 2.2rem 0 1rem;
+  text-align: center;
+  background: linear-gradient(180deg, #8fd9f7, var(--sea-100));
+}
+.page-title {
+  margin-bottom: .3rem;
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 7vw, 4rem);
+  color: #fff;
+  text-shadow: 0 3px 0 var(--sea-900), 0 8px 18px rgba(0,0,0,.25);
+}
+.page-subtitle { font-weight: 800; color: var(--sea-900); }
+
+/* ---------- BARIS COUNTRYBALL ---------- */
+.tray {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: .6rem 1rem; padding: 1rem 0 1.4rem;
+}
+.tray-item {
+  width: 84px; height: 84px; padding: 0;
+  background: none; border: 0; cursor: pointer;
+  animation: melayang 3s ease-in-out infinite;
+}
+.tray-item:nth-child(even) { animation-delay: -1.2s; }
+.tray-item:hover { filter: drop-shadow(0 6px 8px rgba(0,0,0,.3)); }
+.tray-item:focus-visible, .map-ball:focus-visible { outline: 4px dashed var(--sea-900); outline-offset: 4px; }
+
+/* ---------- COUNTRYBALL + WAJAH (dari pembukaan.css) ---------- */
+.ball { position: relative; width: 100%; height: 100%; }
+.ball > img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; user-select: none; }
+.ball-face { position: absolute; width: 55%; height: 42%; top: 34%; left: 22.5%; pointer-events: none; }
+.ball .eye {
+  position: absolute; top: 12%; width: 29%; height: 45%;
+  background: #fff; border: 1.5px solid #252525; border-radius: 50%; overflow: hidden;
+  transition: all .2s ease;
+}
+.ball .eye-left { left: 12%; } .ball .eye-right { right: 12%; }
+.ball .pupil { position: absolute; width: 42%; height: 55%; left: 35%; top: 25%; border-radius: 50%; background: #171717; }
+.ball .brow { position: absolute; top: 0; width: 27%; height: 3px; background: #252525; border-radius: 10px; }
+.ball .brow-left { left: 12%; } .ball .brow-right { right: 12%; }
+.ball .blush { position: absolute; top: 55%; width: 15%; height: 9%; background: rgba(245,105,105,.45); border-radius: 50%; }
+.ball .blush-left { left: 0; } .ball .blush-right { right: 0; }
+.ball .mouth {
+  position: absolute; left: 38%; top: 66%; width: 24%; height: 15%;
+  border-bottom: 3px solid #252525; border-radius: 0 0 50% 50%;
+}
+/* senang */
+.expression-happy .mouth { height: 25%; top: 60%; background: #252525; border: 2px solid #252525; border-radius: 10% 10% 50% 50%; }
+/* penasaran: mata besar melirik, mulut bulat kecil, alis naik */
+.expression-curious .eye { height: 55%; width: 32%; top: 8%; }
+.expression-curious .pupil { left: 52%; top: 15%; }
+.expression-curious .brow-left { transform: rotate(-15deg) translateY(-3px); }
+.expression-curious .mouth { width: 15%; height: 22%; left: 42.5%; top: 66%; border: 3px solid #252525; border-radius: 50%; background: transparent; }
+/* kedip */
+.ball.is-blinking .eye { transform: scaleY(.12); }
+
+/* ---------- PETA ---------- */
+.map-section { padding: 1.5rem 0 3rem; }
+.progress-bar {
+  display: inline-flex; gap: .6rem; align-items: center;
+  margin-bottom: 1rem; padding: .4rem 1.1rem;
+  font-family: var(--font-heading); color: var(--leaf-900);
+  background: var(--sun-100); border: 3px solid var(--sun-500); border-radius: 999px;
+}
+.map-stage {
+  position: relative; width: 100%; aspect-ratio: 800 / 660;
+  background: radial-gradient(circle at 50% 40%, #e9fbff 0%, #bfe9f6 60%, #8fd3ea 100%);
+  border: 5px solid var(--leaf-500); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft); overflow: hidden;
+}
+.map-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.country { cursor: pointer; transition: filter .2s ease; }
+.country path, .country circle { stroke: #fff; stroke-width: 2; stroke-linejoin: round; }
+.country:hover { filter: brightness(1.15) drop-shadow(0 3px 4px rgba(0,0,0,.35)); }
+.country.visited path, .country.visited circle { stroke: var(--sun-400); stroke-width: 4; }
+
+.map-ball {
+  position: absolute; transform: translate(-50%, -50%);
+  display: flex; flex-direction: column; align-items: center;
+  padding: 0; background: none; border: 0; cursor: pointer;
+  visibility: hidden; z-index: 2;
+}
+.map-ball .ball { width: clamp(40px, 7.5vw, 70px); height: clamp(40px, 7.5vw, 70px); }
+.map-ball:hover .ball { transform: scale(1.12); }
+.map-ball .ball { transition: transform .2s ease; }
+.map-label {
+  margin-top: -2px; padding: 0 .5rem;
+  font-family: var(--font-heading); font-weight: 600; font-size: clamp(.6rem, 1.5vw, .85rem);
+  color: var(--sea-900); background: rgba(255,255,255,.85); border-radius: 999px; white-space: nowrap;
+}
+/* tanda centang */
+.map-ball.visited::after {
+  content: "✔"; position: absolute; top: -6px; right: -6px;
+  width: 26px; height: 26px; display: grid; place-items: center;
+  font-size: 15px; font-weight: 800; color: #fff;
+  background: var(--leaf-500); border: 3px solid #fff; border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,.3);
+  animation: kartu-muncul .4s ease;
+}
+
+.games-box {
+  margin-top: 1.5rem; padding: 1.4rem; text-align: center;
+  font-family: var(--font-heading); font-size: 1.3rem; color: var(--leaf-900);
+  background: var(--leaf-100); border: 4px solid var(--leaf-500); border-radius: var(--radius-lg);
+  animation: kartu-muncul .5s ease;
+}
+.games-box[hidden] { display: none; }
+
+/* ---------- VIDEO ---------- */
+.video-overlay {
+  position: fixed; inset: 0; z-index: 500; overflow-y: auto;
+  display: grid; place-items: center; padding: 1rem;
+  background: rgba(8, 73, 111, .88);
+}
+.video-overlay[hidden] { display: none; }
+.video-box {
+  width: min(1100px, 100%);
+  display: grid; grid-template-columns: 1fr 230px; gap: 1.2rem;
+  padding: 1.4rem; background: var(--warm-white);
+  border: 5px solid var(--sun-500); border-radius: var(--radius-lg);
+  animation: kartu-muncul .4s ease;
+}
+.video-main h2 { font-family: var(--font-heading); color: var(--leaf-700); margin-bottom: .6rem; }
+.video-frame { aspect-ratio: 16 / 9; background: #000; border-radius: var(--radius-md); overflow: hidden; }
+.video-frame video { width: 100%; height: 100%; }
+.video-error { margin: .6rem 0 0; font-weight: 800; color: var(--hibiscus); }
+.video-error[hidden] { display: none; }
+.back-button {
+  margin-top: .9rem; padding: .5rem 1.3rem; cursor: pointer;
+  font-family: var(--font-heading); font-weight: 600; font-size: 1rem;
+  color: var(--sea-700); background: var(--sea-100); border: 2px solid var(--sea-300); border-radius: 999px;
+}
+.back-button:hover { background: var(--sun-400); color: #4a3300; }
+
+/* ASEANball di kanan bawah */
+.video-guide { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: .8rem; }
+.speech {
+  position: relative; margin: 0; padding: .8rem 1rem; text-align: center;
+  font-weight: 800; color: var(--ink); background: var(--sun-100);
+  border: 3px solid var(--sun-500); border-radius: var(--radius-md);
+}
+.speech::after {
+  content: ""; position: absolute; left: 50%; bottom: -13px; width: 20px; height: 20px;
+  background: var(--sun-100); border: solid var(--sun-500); border-width: 0 3px 3px 0;
+  transform: translateX(-50%) rotate(45deg);
+}
+.guide-ball { width: 170px; height: 170px; animation: melayang 3s ease-in-out infinite; }
+
+/* ---------- RESPONSIF ---------- */
+@media (max-width: 768px) {
+  .video-box { grid-template-columns: 1fr; }
+  .video-guide { flex-direction: row; justify-content: center; align-items: flex-end; }
+  .guide-ball { width: 100px; height: 100px; flex-shrink: 0; }
+  .speech::after { display: none; }
+  .tray-item { width: 64px; height: 64px; }
+  .map-ball.visited::after { width: 20px; height: 20px; font-size: 11px; border-width: 2px; }
+}
