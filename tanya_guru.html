@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanya Guru | PENJELAJAHAN ASEAN</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pertanyaan.css">
+</head>
+<body class="page-pertanyaan">
+  <a class="skip-link" href="#konten-utama">Lompat ke konten utama</a>
+
+  <header class="site-header" id="beranda">
+    <div class="container header-inner">
+      <a class="site-logo" href="index.html" aria-label="PENJELAJAHAN ASEAN - Kembali ke beranda">
+        <img class="site-logo-icon" src="images/bendera-asean.jpg" alt="Bendera ASEAN dengan lambang ASEAN">
+        <span class="site-logo-text">
+          <span class="site-logo-name">PENJELAJAHAN ASEAN</span>
+          <span class="site-logo-sub">ASEAN LITTLE EXPLORERS</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Menu utama">
+        <ul class="site-nav-list">
+          <li><a class="site-nav-link" href="pembukaan.html">Pembukaan</a></li>
+          <li><a class="site-nav-link" href="apa-itu-asean.html">Apa Itu ASEAN?</a></li>
+          <li><a class="site-nav-link" href="fun-games.html">Fun Games</a></li>
+          <li><a class="site-nav-link" href="rangkuman.html">Rangkuman</a></li>
+          <li><a class="site-nav-link" href="pertanyaan.html" aria-current="page">Tanya Guru</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="konten-utama">
+    <section class="intro-section">
+      <div class="container">
+        <h1 class="page-title">TANYA GURU</h1>
+        <p class="page-subtitle">Ada pertanyaan atau hal yang belum kamu pahami? Yuk, tanya guru!!</p>
+      </div>
+    </section>
+
+    <section class="stage-section">
+      <div class="container">
+        <div class="stage" id="stage">
+
+          <!-- NOTES -->
+          <form class="note" id="note" novalidate>
+            <span class="tape" aria-hidden="true"></span>
+            <label class="note-label" for="fName">Nama:</label>
+            <input class="note-name" id="fName" type="text" maxlength="60" autocomplete="name" placeholder="Tulis namamu di sini">
+
+            <label class="note-label" for="fQ">Pertanyaanku:</label>
+            <textarea class="note-question" id="fQ" rows="7" maxlength="500" placeholder="Tulis pertanyaanmu di sini..."></textarea>
+            <p class="counter"><span id="qCount">0</span> / 500</p>
+
+            <button class="send-button" id="sendBtn" type="submit">KIRIM PERTANYAAN ✉️</button>
+            <p class="status" id="status" role="status" aria-live="polite"></p>
+            <a class="fallback" id="fallback" href="#" target="_blank" rel="noopener">Pertanyaan belum masuk? Kirim lewat formulir</a>
+          </form>
+
+          <!-- Countryball + trampolin dibuat oleh pertanyaan.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- pengiriman ke Google Form (tersembunyi) -->
+  <iframe name="gframe" id="gframe" title="Pengiriman pertanyaan" hidden></iframe>
+  <form id="gform" method="POST" target="gframe" hidden>
+    <input name="entry.1766181644"><input name="entry.1121669667">
+  </form>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">PENJELAJAHAN ASEAN</p>
+      <p class="footer-tagline">Belajar, bermain, dan mengenal tetangga kita di Asia Tenggara.</p>
+      <p class="footer-copy">© 2026 PENJELAJAHAN ASEAN. Media belajar untuk siswa kelas 5–6.</p>
+    </div>
+  </footer>
+
+  <script src="pertanyaan.js"></script>
+</body>
+</html>
