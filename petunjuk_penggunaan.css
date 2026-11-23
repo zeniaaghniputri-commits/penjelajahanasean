@@ -1,0 +1,95 @@
+/* =====================================================
+   PENJELAJAHAN ASEAN - PETUNJUK & TUJUAN (CSS)
+   ===================================================== */
+.intro-section { padding: 2.2rem 0 1.4rem; text-align: center; background: linear-gradient(180deg, #8fd9f7, var(--sea-100)); }
+.page-title { margin-bottom: .3rem; font-family: var(--font-heading); font-size: clamp(2.2rem, 7vw, 4rem); color: #fff; text-shadow: 0 3px 0 var(--sea-900), 0 8px 18px rgba(0,0,0,.25); }
+.page-subtitle { font-weight: 800; color: var(--sea-900); }
+
+.notes-section { padding: 2rem 0; }
+.notes-section.alt { background: var(--sun-100); }
+.section-heading { margin-bottom: .8rem; font-family: var(--font-heading); color: var(--leaf-700); }
+.section-heading.center { text-align: center; }
+.section-hint { margin: .4rem 0 1rem; font-weight: 700; }
+
+/* pemandu ASEANball */
+.guide { display: flex; align-items: center; gap: 1rem; max-width: 760px; margin: 0 auto 1rem; }
+.guide-ball {
+  position: relative; flex: 0 0 150px; width: 150px; height: 150px; padding: 0;
+  background: none; border: 0; cursor: pointer; animation: melayang 3s ease-in-out infinite;
+}
+.guide-ball:focus-visible { outline: 4px dashed var(--sea-900); outline-offset: 4px; }
+.guide-ball img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; user-select: none; transition: transform .25s ease; }
+.guide-ball:hover img { transform: scale(1.07) rotate(-3deg); }
+.speech {
+  position: relative; flex: 1; margin: 0; padding: .9rem 1.2rem; font-weight: 800; color: var(--ink);
+  background: var(--sun-100); border: 3px solid var(--sun-500); border-radius: var(--radius-md);
+}
+.speech::before {
+  content: ""; position: absolute; left: -13px; top: 50%; width: 20px; height: 20px;
+  background: var(--sun-100); border: solid var(--sun-500); border-width: 0 0 3px 3px;
+  transform: translateY(-50%) rotate(45deg);
+}
+.speech.pop { animation: kartu-muncul .3s ease; }
+
+/* wajah (dari pembukaan.css) */
+.face { position: absolute; width: 55%; height: 42%; top: 34%; left: 22.5%; pointer-events: none; }
+.face .eye { position: absolute; top: 12%; width: 29%; height: 45%; background: #fff; border: 2px solid #252525; border-radius: 50%; overflow: hidden; transition: all .2s ease; }
+.face .eye-left { left: 12%; } .face .eye-right { right: 12%; }
+.face .pupil { position: absolute; width: 42%; height: 55%; left: 35%; top: 25%; border-radius: 50%; background: #171717; }
+.face .brow { position: absolute; top: 0; width: 27%; height: 5px; background: #252525; border-radius: 10px; transition: all .2s ease; }
+.face .brow-left { left: 12%; } .face .brow-right { right: 12%; }
+.face .blush { position: absolute; top: 55%; width: 15%; height: 9%; background: rgba(245,105,105,.45); border-radius: 50%; }
+.face .blush-left { left: 0; } .face .blush-right { right: 0; }
+.face .mouth { position: absolute; left: 38%; top: 66%; width: 24%; height: 15%; border-bottom: 4px solid #252525; border-radius: 0 0 50% 50%; transition: all .2s ease; }
+.expression-happy .mouth { height: 25%; top: 60%; background: #252525; border: 2px solid #252525; border-radius: 10% 10% 50% 50%; }
+.expression-surprised .eye { height: 55%; width: 32%; top: 8%; }
+.expression-surprised .mouth { width: 15%; height: 22%; left: 42.5%; top: 65%; border: 3px solid #252525; border-radius: 50%; background: transparent; }
+.expression-thinking .pupil { left: 52%; top: 15%; }
+.expression-thinking .brow-left { transform: rotate(-15deg) translateY(-3px); }
+.expression-thinking .mouth { width: 18%; left: 42%; top: 70%; border-radius: 50%; }
+.expression-angry .brow-left { transform: rotate(22deg); top: 8%; }
+.expression-angry .brow-right { transform: rotate(-22deg); top: 8%; }
+.expression-angry .mouth { top: 72%; border-bottom: none; border-top: 4px solid #252525; border-radius: 50%; }
+.expression-sad .brow-left { transform: rotate(-20deg); top: 8%; }
+.expression-sad .brow-right { transform: rotate(20deg); top: 8%; }
+.expression-sad .mouth { top: 75%; border-bottom: none; border-top: 4px solid #252525; border-radius: 50%; }
+.guide-ball.is-blinking .eye { transform: scaleY(.12); }
+
+
+.guide { max-width: 760px; margin: 0 0 1rem; }
+.guide-ball img { transition: transform .25s ease; }
+.speech strong { color: var(--leaf-700); }
+
+/* daftar petunjuk */
+.rule-list { display: grid; gap: .7rem; max-width: 760px; padding: 0; list-style: none; counter-reset: poin; }
+.rule-list li { counter-increment: poin; }
+.rule-list button {
+  position: relative; width: 100%; padding: .8rem 1rem .8rem 3.4rem; text-align: left; cursor: pointer; font: inherit; color: var(--ink);
+  background: #fff; border: 3px solid var(--leaf-500); border-radius: var(--radius-md);
+}
+.rule-list button::before {
+  content: counter(poin); position: absolute; left: .8rem; top: 50%; transform: translateY(-50%); width: 1.9rem; height: 1.9rem; display: grid; place-items: center;
+  font-family: var(--font-heading); color: #fff; background: var(--leaf-500); border-radius: 50%;
+}
+.rule-list button:hover { background: var(--leaf-100); }
+.rule-list button.is-on { background: var(--sun-100); border-color: var(--sun-500); }
+.rule-list button.is-read::after { content: "✔"; position: absolute; right: .9rem; top: 50%; transform: translateY(-50%); color: var(--leaf-700); font-weight: 800; }
+.rule-list li.important button { border-color: var(--hibiscus); background: #fff3f1; }
+.rule-list li.important button::before { background: var(--hibiscus); }
+.badge-important { display: inline-block; margin-right: .4rem; padding: 0 .55rem; font-size: .8rem; font-weight: 800; color: #fff; background: var(--hibiscus); border-radius: 999px; }
+.read-progress { margin-top: 1rem; font-family: var(--font-heading); color: var(--sea-700); }
+
+/* tujuan pembelajaran */
+.goal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+.goal-card { display: flex; gap: .8rem; align-items: flex-start; padding: 1rem 1.2rem; background: #fffef6; border: 3px solid var(--sun-500); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
+.goal-card p { margin: 0; }
+.goal-icon { font-size: 2rem; line-height: 1; }
+
+.closing { text-align: center; }
+.closing .button.is-locked { opacity: .55; pointer-events: none; filter: grayscale(.4); }
+
+@media (max-width: 640px) {
+  .guide { flex-direction: column; text-align: center; }
+  .guide-ball { flex-basis: auto; width: 120px; height: 120px; }
+  .speech::before { left: 50%; top: -13px; transform: translateX(-50%) rotate(135deg); }
+}
