@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petunjuk &amp; Tujuan Pembelajaran | PENJELAJAHAN ASEAN</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="petunjuk_penggunaan.css">
+</head>
+<body class="page-petunjuk">
+  <a class="skip-link" href="#konten-utama">Lompat ke konten utama</a>
+
+  <header class="site-header" id="beranda">
+    <div class="container header-inner">
+      <a class="site-logo" href="index.html" aria-label="PENJELAJAHAN ASEAN - Kembali ke beranda">
+        <img class="site-logo-icon" src="images/bendera-asean.jpg" alt="Bendera ASEAN dengan lambang ASEAN">
+        <span class="site-logo-text">
+          <span class="site-logo-name">PENJELAJAHAN ASEAN</span>
+          <span class="site-logo-sub">ASEAN LITTLE EXPLORERS</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Menu utama">
+        <ul class="site-nav-list">
+          <li><a class="site-nav-link" href="petunjuk_penggunaan.html" aria-current="page">Petunjuk</a></li>
+          <li><a class="site-nav-link" href="pembukaan.html">Pembukaan</a></li>
+          <li><a class="site-nav-link" href="apa-itu-asean.html">Apa Itu ASEAN?</a></li>
+          <li><a class="site-nav-link" href="fun-games.html">Fun Games</a></li>
+          <li><a class="site-nav-link" href="rangkuman.html">Rangkuman</a></li>
+          <li><a class="site-nav-link" href="tanya_guru.html">Tanya Guru</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="konten-utama">
+    <section class="intro-section">
+      <div class="container">
+        <h1 class="page-title">PETUNJUK</h1>
+        <p class="page-subtitle">Baca petunjuk penggunaan media dan tujuan pembelajaran dulu sebelum mulai menjelajah!</p>
+      </div>
+    </section>
+
+    <!-- 1. PETUNJUK PENGGUNAAN MEDIA -->
+    <section class="notes-section" id="petunjuk">
+      <div class="container">
+        <h2 class="section-heading">1. Petunjuk Penggunaan Media</h2>
+        <div class="guide">
+          <button class="guide-ball" id="guideBall" type="button" aria-label="Ketuk countryball untuk mengubah ekspresinya"></button>
+          <p class="speech" id="speech" aria-live="polite"></p>
+        </div>
+        <p class="section-hint">Ketuk setiap poin di bawah ini, lalu baca penjelasan teman-teman countryball.</p>
+        <ol class="rule-list" id="ruleList"></ol>
+        <p class="read-progress" id="readProgress" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 2. TUJUAN PEMBELAJARAN -->
+    <section class="notes-section alt" id="tujuan">
+      <div class="container">
+        <h2 class="section-heading">2. Tujuan Pembelajaran</h2>
+        <p class="section-hint">Setelah belajar dengan media ini, kamu diharapkan bisa:</p>
+        <div class="goal-grid">
+          <article class="goal-card"><span class="goal-icon" aria-hidden="true">📜</span><p>Menjelaskan arti ASEAN dan sejarah berdirinya pada 8 Agustus 1967 di Bangkok.</p></article>
+          <article class="goal-card"><span class="goal-icon" aria-hidden="true">🗺️</span><p>Menyebutkan 11 negara anggota ASEAN dan menunjukkan letaknya di peta.</p></article>
+          <article class="goal-card"><span class="goal-icon" aria-hidden="true">🚩</span><p>Mengenali bendera, ibu kota, dan ciri khas budaya setiap negara anggota ASEAN.</p></article>
+          <article class="goal-card"><span class="goal-icon" aria-hidden="true">🤝</span><p>Menjelaskan tujuan ASEAN dan manfaat kerja sama antarnegara anggotanya.</p></article>
+          <article class="goal-card"><span class="goal-icon" aria-hidden="true">💛</span><p>Menunjukkan sikap menghargai perbedaan budaya di antara negara-negara ASEAN.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. LANJUT -->
+    <section class="notes-section closing">
+      <div class="container">
+        <h2 class="section-heading center">Sudah Siap Menjelajah?</h2>
+        <p>Ingat ya, kita belajar dari awal sampai akhir tanpa melewatkan satu bagian pun.</p>
+        <a class="button button-primary" id="nextBtn" href="pembukaan.html">LANJUT KE PEMBUKAAN →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">PENJELAJAHAN ASEAN</p>
+      <p class="footer-tagline">Belajar, bermain, dan mengenal tetangga kita di Asia Tenggara.</p>
+      <p class="footer-copy">© 2026 PENJELAJAHAN ASEAN. Media belajar untuk siswa kelas 5–6.</p>
+    </div>
+  </footer>
+
+  <script src="petunjuk_penggunaan.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PENJELAJAHAN ASEAN - Ayo Menjelajah Asia Tenggara! Website belajar ASEAN untuk siswa kelas 5 dan 6 SD.">
+  <title>PENJELAJAHAN ASEAN | Ayo Menjelajah Asia Tenggara!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-home">
+
+  <!-- Tautan lompat untuk aksesibilitas -->
+  <a class="skip-link" href="#konten-utama">Lompat ke konten utama</a>
+
+  <!-- Tombol musik latar (dikendalikan script.js) -->
+  <button class="music-toggle" id="musicToggle" type="button"
+          aria-pressed="false" aria-label="Putar musik Anthem_ASEAN_The_ASEAN_Way.mp3">
+    <span class="music-toggle-icon" aria-hidden="true">🔇</span>
+    <span class="music-toggle-label">Putar</span>
+  </button>
+
+  <!-- ===================== 1. HEADER ===================== -->
+  <header class="site-header" id="beranda">
+    <div class="container header-inner">
+
+      <a class="site-logo" href="index.html" aria-label="PENJELAJAHAN ASEAN - Kembali ke beranda">
+        <img class="site-logo-icon"
+             src="images/bendera-asean.jpg"
+             alt="Bendera ASEAN dengan lambang ASEAN">
+        <span class="site-logo-text">
+          <span class="site-logo-name">PENJELAJAHAN ASEAN</span>
+          <span class="site-logo-sub">ASEAN LITTLE EXPLORERS</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Menu utama">
+        <ul class="site-nav-list">
+          <li class="site-nav-item"><a class="site-nav-link" href="index.html">Beranda</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="petunjuk_penggunaan.html">Petunjuk</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="pembukaan.html">Pembukaan</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="apa-itu-asean.html">Apa Itu ASEAN?</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="fun-games.html">Fun Games</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="rangkuman.html">Rangkuman</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="tanya_guru.html">Tanya Guru</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="konten-utama">
+
+    <!-- ===================== 2. HERO SECTION ===================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+
+      <!-- Gambar peta Asia Tenggara -->
+      <div class="hero-background">
+        <img class="hero-background-image"
+             src="images/peta-asia-tenggara-tropis.jpg"
+             alt="Peta geografis Asia Tenggara yang memperlihatkan Myanmar, Thailand, Laos, Kamboja, Vietnam, Malaysia, Singapura, Brunei Darussalam, Indonesia, Filipina, dan Timor-Leste">
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title" id="hero-title">PENJELAJAHAN ASEAN</h1>
+          <p class="hero-subtitle">Ayo Menjelajahi Asia Tenggara!</p>
+          <p class="hero-text">
+            Yuk, kenali negara-negara, budaya, dan sejarah yang ada di Asia Tenggara!
+          </p>
+          <a class="button button-primary hero-button" href="#navigasi">MULAI MENJELAJAH</a>
+        </div>
+
+        <!-- Ruang untuk karakter penjelajah / maskot -->
+        <div class="hero-mascot">
+          <img class="hero-mascot-image"
+               src="images/maskot-penjelajah.png"
+               alt="Maskot anak penjelajah membawa kompas dan peta sambil tersenyum">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. NAVIGATION SECTION ===================== -->
+    <section class="navigation" id="navigasi" aria-labelledby="navigasi-title">
+      <div class="container">
+
+        <header class="section-header">
+          <h2 class="section-title" id="navigasi-title">Pilih Petualanganmu!</h2>
+          <p class="section-intro">Ketuk salah satu kartu di bawah untuk memulai perjalananmu.</p>
+        </header>
+
+        <ul class="card-grid">
+
+          <!-- Kartu A: PETUNJUK  -->
+           <li class="card-grid-item">
+            <article class="nav-card nav-card-petunjuk">
+              <a class="nav-card-link" href="petunjuk_penggunaan.html">
+                <div class="nav-card-icon">
+                </div>
+                <h3 class="nav-card-title">PETUNJUK</h3>
+                <p class="nav-card-description">Kita baca petujuk dulu sebelum memulai petualanagan</p>
+                <span class="nav-card-action">Mulai →</span>
+              </a>
+            </article>
+          </li>
+
+          <!-- Kartu B: PEMBUKAAN -->
+          <li class="card-grid-item">
+            <article class="nav-card nav-card-pembukaan">
+              <a class="nav-card-link" href="pembukaan.html">
+                <div class="nav-card-icon">
+                </div>
+                <h3 class="nav-card-title">PEMBUKAAN</h3>
+                <p class="nav-card-description">Yuk, mulai perjalanan dan kenali ASEAN!</p>
+                <span class="nav-card-action">Mulai →</span>
+              </a>
+            </article>
+          </li>
+
+          <!-- Kartu C: APA ITU ASEAN? -->
+          <li class="card-grid-item">
+            <article class="nav-card nav-card-asean">
+              <a class="nav-card-link" href="apa-itu-asean.html">
+                <div class="nav-card-icon">
+                </div>
+                <h3 class="nav-card-title">APA ITU ASEAN?</h3>
+                <p class="nav-card-description">Kenali ASEAN dan negara-negara anggotanya.</p>
+                <span class="nav-card-action">Jelajahi →</span>
+              </a>
+            </article>
+          </li>
+
+          <!-- Kartu D: FUN GAMES -->
+          <li class="card-grid-item">
+            <article class="nav-card nav-card-games">
+              <a class="nav-card-link" href="fun-games.html">
+                <div class="nav-card-icon">
+                </div>
+                <h3 class="nav-card-title">FUN GAMES</h3>
+                <p class="nav-card-description">Ayo bermain sambil menguji pengetahuanmu tentang ASEAN!</p>
+                <span class="nav-card-action">Main →</span>
+              </a>
+            </article>
+          </li>
+
+          <!-- Kartu E: RANGKUMAN -->
+          <li class="card-grid-item">
+            <article class="nav-card nav-card-rangkuman">
+              <a class="nav-card-link" href="rangkuman.html">
+                <div class="nav-card-icon">
+                </div>
+                <h3 class="nav-card-title">RANGKUMAN</h3>
+                <p class="nav-card-description">Ingat kembali hal-hal menarik yang sudah kamu pelajari!</p>
+                <span class="nav-card-action">Baca →</span>
+              </a>
+            </article>
+          </li>
+
+          <!-- Kartu F: TANYA GURU -->
+          <li class="card-grid-item">
+            <article class="nav-card nav-card-pertanyaan">
+              <a class="nav-card-link" href="tanya_guru.html">
+                <div class="nav-card-icon">
+                </div>
+                <h3 class="nav-card-title">TANYA GURU</h3>
+                <p class="nav-card-description">Punya pertanyaan atau ada yang belum kamu pahami? Yuk, tanyakan kepada guru!</p>
+                <span class="nav-card-action">Tanya →</span>
+              </a>
+            </article>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== 4. FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <img class="footer-logo"
+             src="images/bendera-asean.jpg"
+             alt="Bendera ASEAN">
+        <p class="footer-name">PENJELAJAHAN ASEAN</p>
+      </div>
+
+      <p class="footer-tagline">Belajar, bermain, dan mengenal tetangga kita di Asia Tenggara.</p>
+
+      <p class="footer-copy">
+        © <span class="footer-year">2026</span> PENJELAJAHAN ASEAN. Media belajar untuk siswa kelas 5–6.
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- Musik latar: The ASEAN Way -->
+<audio id="aseanAudio" loop preload="auto">
+    <source src="audio/Anthem ASEAN The ASEAN Way.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung pemutar audio.
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
