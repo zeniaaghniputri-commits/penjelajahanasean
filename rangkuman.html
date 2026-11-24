@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rangkuman | PENJELAJAHAN ASEAN</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="rangkuman.css">
+</head>
+<body class="page-rangkuman">
+  <a class="skip-link" href="#konten-utama">Lompat ke konten utama</a>
+
+  <header class="site-header" id="beranda">
+    <div class="container header-inner">
+      <a class="site-logo" href="index.html" aria-label="PENJELAJAHAN ASEAN - Kembali ke beranda">
+        <img class="site-logo-icon" src="images/bendera-asean.jpg" alt="Bendera ASEAN dengan lambang ASEAN">
+        <span class="site-logo-text">
+          <span class="site-logo-name">PENJELAJAHAN ASEAN</span>
+          <span class="site-logo-sub">ASEAN LITTLE EXPLORERS</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Menu utama">
+        <ul class="site-nav-list">
+          <li><a class="site-nav-link" href="petunjuk_penggunaan.html">Petunjuk</a></li>
+          <li><a class="site-nav-link" href="pembukaan.html">Pembukaan</a></li>
+          <li><a class="site-nav-link" href="apa-itu-asean.html">Apa Itu ASEAN?</a></li>
+          <li><a class="site-nav-link" href="fun-games.html">Fun Games</a></li>
+          <li><a class="site-nav-link" href="rangkuman.html" aria-current="page">Rangkuman</a></li>
+          <li><a class="site-nav-link" href="tanya_guru.html">Tanya Guru</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="konten-utama">
+
+    <section class="intro-section">
+      <div class="container">
+        <h1 class="page-title">📒 RANGKUMAN</h1>
+        <p class="page-subtitle">Buku Catatan Petualang: ingat kembali semua yang sudah kamu pelajari!</p>
+        <div class="tools no-print">
+          <button class="tool-button" id="printBtn" type="button">🖨️ Cetak / Simpan PDF</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. INTISARI -->
+    <section class="notes-section" id="intisari">
+      <div class="container">
+        <h2 class="section-heading">1. Intisari ASEAN</h2>
+        <div class="note-grid">
+          <article class="note-card">
+            <h3>Apa itu ASEAN?</h3>
+            <p><strong>ASEAN</strong> singkatan dari <em>Association of Southeast Asian Nations</em>, artinya Perhimpunan Bangsa-Bangsa Asia Tenggara. ASEAN adalah organisasi yang dibentuk agar negara-negara di Asia Tenggara bisa bekerja sama di bidang pendidikan, ekonomi, kesehatan, budaya, dan lingkungan, serta menjaga perdamaian.</p>
+          </article>
+          <article class="note-card">
+            <h3>Sejarah Berdirinya</h3>
+            <p>ASEAN didirikan pada <strong>8 Agustus 1967</strong> di <strong>Bangkok, Thailand</strong>, ditandai dengan penandatanganan <strong>Deklarasi Bangkok</strong>. Pendirinya ada 5 negara dan 5 tokoh:</p>
+            <ul class="founders">
+              <li>🇮🇩 Adam Malik <span>Indonesia</span></li>
+              <li>🇲🇾 Tun Abdul Razak <span>Malaysia</span></li>
+              <li>🇵🇭 Narciso R. Ramos <span>Filipina</span></li>
+              <li>🇸🇬 S. Rajaratnam <span>Singapura</span></li>
+              <li>🇹🇭 Thanat Khoman <span>Thailand</span></li>
+            </ul>
+          </article>
+          <article class="note-card">
+            <h3>Tujuan ASEAN</h3>
+            <ol>
+              <li>Meningkatkan perekonomian dan kesejahteraan masyarakat.</li>
+              <li>Menjaga perdamaian dan keamanan di Asia Tenggara.</li>
+              <li>Saling membantu dan bekerja sama di berbagai bidang.</li>
+              <li>Meningkatkan pendidikan dan pengetahuan masyarakat.</li>
+              <li>Bekerja sama menyelesaikan masalah bersama.</li>
+            </ol>
+          </article>
+        </div>
+
+        <article class="note-card wide">
+          <h3>Perkembangan Anggota ASEAN</h3>
+          <ol class="timeline">
+            <li><b>1967</b><span>5 negara pendiri: Indonesia, Malaysia, Filipina, Singapura, Thailand</span></li>
+            <li><b>1984</b><span>Brunei Darussalam</span></li>
+            <li><b>1995</b><span>Vietnam</span></li>
+            <li><b>1997</b><span>Laos dan Myanmar</span></li>
+            <li><b>1999</b><span>Kamboja</span></li>
+            <li><b>2025</b><span>Timor-Leste, jadi anggota ke-11</span></li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2. KARTU NEGARA -->
+    <section class="notes-section alt" id="kartuNegara">
+      <div class="container">
+        <h2 class="section-heading">2. Kartu 11 Negara ASEAN</h2>
+        <p class="section-hint no-print">Ketuk kartu untuk membaliknya dan melihat catatan negara itu.</p>
+        <div class="country-grid" id="countryGrid"></div>
+      </div>
+    </section>
+
+    <!-- 3. INGAT YA -->
+    <section class="notes-section" id="ingat">
+      <div class="container">
+        <h2 class="section-heading">3. Ingat Ya!</h2>
+        <div class="guide">
+          <button class="guide-ball no-print" id="guideBall" type="button" aria-label="Ketuk ASEANball untuk mengubah ekspresinya"></button>
+          <p class="speech" id="speech" aria-live="polite"></p>
+        </div>
+        <ol class="remember-list" id="rememberList">
+          <li><button type="button">ASEAN didirikan pada <strong>8 Agustus 1967</strong> di <strong>Bangkok, Thailand</strong>.</button></li>
+          <li><button type="button">Negara pendirinya ada <strong>5</strong>: Indonesia, Malaysia, Filipina, Singapura, dan Thailand.</button></li>
+          <li><button type="button">Sekarang ASEAN punya <strong>11 negara anggota</strong>. Timor-Leste bergabung pada tahun 2025.</button></li>
+          <li><button type="button">ASEAN bertujuan agar negara anggotanya <strong>bekerja sama, menjaga perdamaian, dan hidup sejahtera</strong>.</button></li>
+          <li><button type="button">Setiap negara punya bahasa, makanan, pakaian, dan budaya sendiri. <strong>Hargai perbedaan</strong> dan saling membantu!</button></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 5. PENUTUP -->
+    <section class="notes-section closing no-print">
+      <div class="container">
+        <h2 class="section-heading">Petualanganmu Seru, Ya!</h2>
+        <p>Masih ada yang belum dipahami? Tanyakan kepada guru, atau ulangi lagi permainannya.</p>
+        <div class="closing-links">
+          <a class="button button-primary" href="tanya_guru.html">TANYA GURU</a>
+          <a class="button button-primary" href="fun-games.html">MAIN FUN GAMES</a>
+          <a class="button button-primary" href="apa-itu-asean.html">LIHAT MATERI LAGI</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">PENJELAJAHAN ASEAN</p>
+      <p class="footer-tagline">Belajar, bermain, dan mengenal tetangga kita di Asia Tenggara.</p>
+      <p class="footer-copy">© 2026 PENJELAJAHAN ASEAN. Media belajar untuk siswa kelas 5–6.</p>
+    </div>
+  </footer>
+
+  <script src="rangkuman.js"></script>
+</body>
+</html>
